@@ -6,16 +6,20 @@
  * @n: number of char to be copied
  * Return: dest
  */
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n)
 {
-	int dest_len;
-	int i;
+	int j;
 
-	for (dest_len = 0; dest[dest_len] != '\0';)
-		dest_len++;
-	for (i = 0; i < n && src[i] != '\0';)
-		i++;
-	dest[dest_len + i] = src[i];
-	dest[dest_len + i] = '\0';
+	j = 0;
+	while (j < n && src[j] != '\0')
+	{
+		dest[j] = src[j];
+		j++;
+	}
+	while (j < n)
+	{
+		dest[j] = '\0';
+		j++;
+	}
 	return (dest);
 }
