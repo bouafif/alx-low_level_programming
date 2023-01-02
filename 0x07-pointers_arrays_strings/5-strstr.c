@@ -23,7 +23,6 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (i != s)
 			haystack++;
-	}
 	else 
 		return (haystack);
 }
